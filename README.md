@@ -10,3 +10,30 @@ A task pool is used, and free servers will immediately become available in the p
 **Note!** You will need access to a network of computers running Hopsan remote services (that allows bash script execution) to use this tool.
 
 Hopsan can be found here: https://www.iei.liu.se/flumes/system-simulation/hopsan
+
+## Using the tool
+
+```bash
+./runRemoteTasks.py --help
+usage: runRemoteTasks.py [-h] [--user USER] [--hopsandir HOPSANDIR]
+                         [--serverlist SERVERLIST] [--ssscript SSSCRIPT]
+                         [--tasklist TASKLIST] [--runonall] [--outdir OUTDIR]
+                         [--resultfiles [RESULTFILES [RESULTFILES ...]]]
+                         [--numslots NUMSLOTS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --user USER           User name to use
+  --hopsandir HOPSANDIR
+                        Path to the Hopsan bin directory to use
+  --serverlist SERVERLIST
+                        Text file with server ip:port line by line
+  --ssscript SSSCRIPT   Server side script to execute
+  --tasklist TASKLIST   A list of tasks (directories) to process
+  --runonall            Run the task on every server
+  --outdir OUTDIR       The destination for received file (will be created if
+                        missing)
+  --resultfiles [RESULTFILES [RESULTFILES ...]]
+  --numslots NUMSLOTS   The number of required slots, n>0
+
+```
